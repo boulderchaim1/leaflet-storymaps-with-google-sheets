@@ -125,7 +125,7 @@ $(window).on('load', function() {
           L.marker([lat, lon], {
             icon: L.ExtraMarkers.icon({
               icon: 'fa-number',
-              number: ++chapterCount,
+              number: c['Chapter'],
               markerColor: 'blue'
             })
           }
