@@ -119,13 +119,14 @@ $(window).on('load', function() {
       if ( !isNaN(parseFloat(c['Latitude']))
         && !isNaN(parseFloat(c['Longitude']))) {
         var lat = parseFloat(c['Latitude']);
+        var markernum = parseInt(c['Chapter']);
         var lon = parseFloat(c['Longitude']);
 
         markers.push(
           L.marker([lat, lon], {
             icon: L.ExtraMarkers.icon({
               icon: 'fa-number',
-              number: c['Chapter'],
+              number: markernum,
               markerColor: 'blue'
             })
           }
